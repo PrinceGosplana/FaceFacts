@@ -26,6 +26,11 @@ struct ContentView: View {
             .navigationDestination(for: Person.self) { person in
                 EditPersonView(person: person)
             }
+            .toolbar {
+                Button("Add Person",
+                       systemImage: "plus",
+                       action: addPerson)
+            }
         }
     }
     
