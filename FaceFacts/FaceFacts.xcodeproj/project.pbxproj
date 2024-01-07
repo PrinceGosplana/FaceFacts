@@ -12,6 +12,7 @@
 		95202B552B498D6A00723164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95202B542B498D6A00723164 /* Assets.xcassets */; };
 		95202B582B498D6A00723164 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95202B572B498D6A00723164 /* Preview Assets.xcassets */; };
 		95202B5F2B498DF500723164 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95202B5E2B498DF500723164 /* Person.swift */; };
+		95202B612B4AA74100723164 /* EditPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95202B602B4AA74100723164 /* EditPersonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		95202B542B498D6A00723164 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95202B572B498D6A00723164 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		95202B5E2B498DF500723164 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		95202B602B4AA74100723164 /* EditPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				95202B502B498D6600723164 /* FaceFactsApp.swift */,
 				95202B522B498D6600723164 /* ContentView.swift */,
 				95202B5E2B498DF500723164 /* Person.swift */,
+				95202B602B4AA74100723164 /* EditPersonView.swift */,
 				95202B542B498D6A00723164 /* Assets.xcassets */,
 				95202B562B498D6A00723164 /* Preview Content */,
 			);
@@ -143,6 +146,7 @@
 				95202B5F2B498DF500723164 /* Person.swift in Sources */,
 				95202B532B498D6600723164 /* ContentView.swift in Sources */,
 				95202B512B498D6600723164 /* FaceFactsApp.swift in Sources */,
+				95202B612B4AA74100723164 /* EditPersonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
