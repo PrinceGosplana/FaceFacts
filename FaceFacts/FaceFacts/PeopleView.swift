@@ -29,6 +29,8 @@ struct PeopleView: View {
                 true
             } else {
                 person.name.localizedStandardContains(searchString)
+                || person.emailAddress.localizedStandardContains(searchString)
+                || person.details.localizedStandardContains(searchString)
             }
         })
     }
