@@ -13,6 +13,8 @@ struct ContentView: View {
     @State private var path = [Person]()
     @Query var people: [Person]
     
+    @State private var searchText = ""
+    
     var body: some View {
         NavigationStack(path: $path) {
             List {
@@ -32,6 +34,7 @@ struct ContentView: View {
                        systemImage: "plus",
                        action: addPerson)
             }
+            .searchable(text: $searchText)
         }
     }
     
