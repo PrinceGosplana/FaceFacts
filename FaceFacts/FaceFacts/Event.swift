@@ -5,14 +5,16 @@
 //  Created by OLEKSANDR ISAIEV on 09.01.2024.
 //
 
-import SwiftUI
+import Foundation
+import SwiftData
 
-struct Event: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+@Model
+class Event {
+    var name: String
+    var location: String
+    
+    init(name: String, location: String) {
+        self.name = name
+        self.location = location
     }
-}
-
-#Preview {
-    Event()
 }
