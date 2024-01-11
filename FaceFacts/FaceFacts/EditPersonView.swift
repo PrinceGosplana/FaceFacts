@@ -5,10 +5,16 @@
 //  Created by OLEKSANDR ISAIEV on 07.01.2024.
 //
 
+import SwiftData
 import SwiftUI
 
 struct EditPersonView: View {
     @Bindable var person: Person
+    
+    @Query(sort: [
+        SortDescriptor(\Event.name),
+        SortDescriptor(\Event.location)
+    ]) var events: [Event]
     
     var body: some View {
         Form {
@@ -20,6 +26,21 @@ struct EditPersonView: View {
                     .textInputAutocapitalization(.never)
             }
             
+            Section("Where did you meet them?") {
+                Picker("Met at", selection: $person.metAt) {
+                    Text("Unknown event")
+                    
+                    if events.isEmpty == false {
+                        Divider()
+                        
+                        ForEach(events) { event in
+                            Text(event.name)
+                        }
+                    }
+                }
+                Button("Add a new event", action: addEvent)
+            }
+            
             Section("Notes") {
                 // asis here means that textfield will grows vertically, when text became bigger
                 TextField("Details about this person", text: $person.details, axis: .vertical)
@@ -27,6 +48,10 @@ struct EditPersonView: View {
         }
         .navigationTitle("Edit Person")
         .navigationBarTitleDisplayMode(.inline)
+    }
+    
+    private func addEvent() {
+        
     }
 }
 
