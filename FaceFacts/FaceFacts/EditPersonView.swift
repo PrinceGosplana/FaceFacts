@@ -9,6 +9,7 @@ import SwiftData
 import SwiftUI
 
 struct EditPersonView: View {
+    @Environment(\.modelContext) var modelContext
     @Bindable var person: Person
     
     @Query(sort: [
@@ -51,7 +52,8 @@ struct EditPersonView: View {
     }
     
     private func addEvent() {
-        
+        let event = Event(name: "", location: "")
+        modelContext.insert(event)
     }
 }
 
