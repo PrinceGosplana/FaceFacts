@@ -16,6 +16,7 @@
 		95202B632B4BB52200723164 /* PeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95202B622B4BB52200723164 /* PeopleView.swift */; };
 		95202B652B4D3DB400723164 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95202B642B4D3DB400723164 /* Event.swift */; };
 		95202B672B4F9E9B00723164 /* EditEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95202B662B4F9E9B00723164 /* EditEventView.swift */; };
+		95202B692B51244A00723164 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95202B682B51244900723164 /* Preview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		95202B622B4BB52200723164 /* PeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleView.swift; sourceTree = "<group>"; };
 		95202B642B4D3DB400723164 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		95202B662B4F9E9B00723164 /* EditEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventView.swift; sourceTree = "<group>"; };
+		95202B682B51244900723164 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				95202B602B4AA74100723164 /* EditPersonView.swift */,
 				95202B662B4F9E9B00723164 /* EditEventView.swift */,
 				95202B622B4BB52200723164 /* PeopleView.swift */,
+				95202B682B51244900723164 /* Preview.swift */,
 				95202B542B498D6A00723164 /* Assets.xcassets */,
 				95202B562B498D6A00723164 /* Preview Content */,
 			);
@@ -154,6 +157,7 @@
 			files = (
 				95202B5F2B498DF500723164 /* Person.swift in Sources */,
 				95202B632B4BB52200723164 /* PeopleView.swift in Sources */,
+				95202B692B51244A00723164 /* Preview.swift in Sources */,
 				95202B532B498D6600723164 /* ContentView.swift in Sources */,
 				95202B512B498D6600723164 /* FaceFactsApp.swift in Sources */,
 				95202B652B4D3DB400723164 /* Event.swift in Sources */,
