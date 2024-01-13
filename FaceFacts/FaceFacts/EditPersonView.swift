@@ -23,6 +23,11 @@ struct EditPersonView: View {
     var body: some View {
         Form {
             Section {
+                if let imageData = person.photo, let uiImage = UIImage(data: imageData) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFit()
+                }
                 PhotosPicker(selection: $selectedItem, matching: .images) {
                     Label("Select a photo", systemImage: "person")
                 }
@@ -62,12 +67,19 @@ struct EditPersonView: View {
         .navigationDestination(for: Event.self) { event in
             EditEventView(event: event)
         }
+        .onChange(of: selectedItem, loadPhoto)
     }
     
     private func addEvent() {
         let event = Event(name: "", location: "")
         modelContext.insert(event)
         navigationPath.append(event)
+    }
+    
+    private func loadPhoto() {
+        Task { @MainActor in
+            person.photo = try await selectedItem?.loadTransferable(type: Data.self)
+        }
     }
 }
 
