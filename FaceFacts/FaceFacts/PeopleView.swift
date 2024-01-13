@@ -44,5 +44,12 @@ struct PeopleView: View {
 }
 
 #Preview {
-    PeopleView()
+    do {
+        let preview = try Preview()
+        
+        return PeopleView()
+            .modelContainer(preview.container)
+    } catch {
+        return Text("Failed to create preview: \(error.localizedDescription)")
+    }
 }
