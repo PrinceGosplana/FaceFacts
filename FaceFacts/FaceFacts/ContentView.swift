@@ -49,5 +49,12 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    do {
+        let preview = try Preview()
+        
+        return ContentView()
+            .modelContainer(preview.container)
+    } catch {
+        return Text("Failed to create preview: \(error.localizedDescription)")
+    }
 }
