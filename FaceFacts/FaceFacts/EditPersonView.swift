@@ -5,6 +5,7 @@
 //  Created by OLEKSANDR ISAIEV on 07.01.2024.
 //
 
+import PhotosUI
 import SwiftData
 import SwiftUI
 
@@ -12,6 +13,7 @@ struct EditPersonView: View {
     @Environment(\.modelContext) var modelContext
     @Bindable var person: Person
     @Binding var navigationPath: NavigationPath
+    @State private var selectedItem: PhotosPickerItem?
     
     @Query(sort: [
         SortDescriptor(\Event.name),
@@ -20,6 +22,11 @@ struct EditPersonView: View {
     
     var body: some View {
         Form {
+            Section {
+                PhotosPicker(selection: $selectedItem, matching: .images) {
+                    Label("Select a photo", systemImage: "person")
+                }
+            }
             Section {
                 TextField("Name", text: $person.name)
                     .textContentType(.name)
